@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSAlarmServer_WD", "TSAlarmServer_WD\TSAlarmServer_WD.vcproj", "{006C7A8A-4BB2-4174-A885-F965F84A6BBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{006C7A8A-4BB2-4174-A885-F965F84A6BBE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{006C7A8A-4BB2-4174-A885-F965F84A6BBE}.Debug|Win32.Build.0 = Debug|Win32
+		{006C7A8A-4BB2-4174-A885-F965F84A6BBE}.Release|Win32.ActiveCfg = Release|Win32
+		{006C7A8A-4BB2-4174-A885-F965F84A6BBE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WandaMsg" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.199.82.184:20001/WandaMsgService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.199.82.184:20001/WandaMsgService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.199.82.184:20001/WandaMsgService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NTS.WEB.DataContact.EMCS" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWandaMsg_SetRTXInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetMMSInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMMSInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetMMSInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMMSInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXNotify_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXNotify" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXNotify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXNotifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXJSON_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXJSON" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXJSON_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSJSON_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSJSON" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSJSON_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailJSON_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailJSON" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailJSON_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSInfoC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSInfoC" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetSMSInfoC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSMSInfoCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXInfoC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXInfoC" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXInfoC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXInfoCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailInfoC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailInfoC" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetEmailInfoC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailInfoCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetMMSInfoC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMMSInfoC" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetMMSInfoC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMMSInfoCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXNotifyC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXNotifyC" />
+  </wsdl:message>
+  <wsdl:message name="IWandaMsg_SetRTXNotifyC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRTXNotifyCResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWandaMsg">
+    <wsdl:operation name="SetRTXInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXInfo" message="tns:IWandaMsg_SetRTXInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXInfoResponse" message="tns:IWandaMsg_SetRTXInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSInfo" message="tns:IWandaMsg_SetSMSInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSInfoResponse" message="tns:IWandaMsg_SetSMSInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailInfo" message="tns:IWandaMsg_SetEmailInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailInfoResponse" message="tns:IWandaMsg_SetEmailInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMMSInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetMMSInfo" message="tns:IWandaMsg_SetMMSInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetMMSInfoResponse" message="tns:IWandaMsg_SetMMSInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXNotify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXNotify" message="tns:IWandaMsg_SetRTXNotify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXNotifyResponse" message="tns:IWandaMsg_SetRTXNotify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXJSON">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXJSON" message="tns:IWandaMsg_SetRTXJSON_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXJSONResponse" message="tns:IWandaMsg_SetRTXJSON_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSJSON">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSJSON" message="tns:IWandaMsg_SetSMSJSON_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSJSONResponse" message="tns:IWandaMsg_SetSMSJSON_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailJSON">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailJSON" message="tns:IWandaMsg_SetEmailJSON_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailJSONResponse" message="tns:IWandaMsg_SetEmailJSON_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSInfoC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSInfoC" message="tns:IWandaMsg_SetSMSInfoC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetSMSInfoCResponse" message="tns:IWandaMsg_SetSMSInfoC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXInfoC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXInfoC" message="tns:IWandaMsg_SetRTXInfoC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXInfoCResponse" message="tns:IWandaMsg_SetRTXInfoC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailInfoC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailInfoC" message="tns:IWandaMsg_SetEmailInfoC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetEmailInfoCResponse" message="tns:IWandaMsg_SetEmailInfoC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMMSInfoC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetMMSInfoC" message="tns:IWandaMsg_SetMMSInfoC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetMMSInfoCResponse" message="tns:IWandaMsg_SetMMSInfoC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXNotifyC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXNotifyC" message="tns:IWandaMsg_SetRTXNotifyC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWandaMsg/SetRTXNotifyCResponse" message="tns:IWandaMsg_SetRTXNotifyC_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWandaMsg" type="tns:IWandaMsg">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetRTXInfo">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetRTXInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSInfo">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetSMSInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailInfo">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetEmailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMMSInfo">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetMMSInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXNotify">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetRTXNotify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXJSON">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetRTXJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSJSON">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetSMSJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailJSON">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetEmailJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSMSInfoC">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetSMSInfoC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXInfoC">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetRTXInfoC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailInfoC">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetEmailInfoC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMMSInfoC">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetMMSInfoC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRTXNotifyC">
+      <soap:operation soapAction="http://tempuri.org/IWandaMsg/SetRTXNotifyC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WandaMsg">
+    <wsdl:port name="BasicHttpBinding_IWandaMsg" binding="tns:BasicHttpBinding_IWandaMsg">
+      <soap:address location="http://10.199.82.184:20001/WandaMsgService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
