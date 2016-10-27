@@ -1,0 +1,274 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VideoPlayer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VideoPlayer.ico"
+IDI_ENABLE_PLAY         ICON    DISCARDABLE     "res\\enable_play.ico"
+IDI_DISABLE_PLAY        ICON    DISCARDABLE     "res\\disable_play.ico"
+IDI_ENABLE_PAUSE        ICON    DISCARDABLE     "res\\enable_pause.ico"
+IDI_DISABLE_PAUSE       ICON    DISCARDABLE     "res\\disable_pause.ico"
+IDI_DISABLE_STOP        ICON    DISCARDABLE     "res\\disable_stop.ico"
+IDI_ENABLE_STOP         ICON    DISCARDABLE     "res\\enable_stop.ico"
+IDI_ENABLE_SOUND        ICON    DISCARDABLE     "res\\enable_sound.ico"
+IDI_DISABLE_SOUND       ICON    DISCARDABLE     "res\\disable_sound.ico"
+IDI_CAPPIC              ICON    DISCARDABLE     "res\\cappic.ico"
+IDI_DISABLE_FAST        ICON    DISCARDABLE     "res\\disable_fast.ico"
+IDI_ENABLE_FAST         ICON    DISCARDABLE     "res\\enable_fast.ico"
+IDI_ENABLE_SLOW         ICON    DISCARDABLE     "res\\enable_slow.ico"
+IDI_DISABLE_SLOW        ICON    DISCARDABLE     "res\\disable_slow.ico"
+IDI_ENABLE_STEPFORWARD  ICON    DISCARDABLE     "res\\enable_stepforward.ico"
+IDI_DISABLE_STEPFORWARD ICON    DISCARDABLE     "res\\disable_stepforward.ico"
+IDI_ENABLE_STEPBACK     ICON    DISCARDABLE     "res\\enable_stepback.ico"
+IDI_DISABLE_STEPBACK    ICON    DISCARDABLE     "res\\disable_stepback.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 254, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 VideoPlayer"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    CTEXT           "VideoPlayer.V0.05.101207",IDC_STATIC,67,20,119,8,
+                    SS_NOPREFIX
+    CTEXT           "南京天溯自动化控制系统有限公司 版权所有 2003-2010",
+                    IDC_STATIC,33,52,200,8
+    DEFPUSHBUTTON   "确定",IDOK,104,75,50,14,WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,6,7,241,63
+    CTEXT           "天溯NTS-900I智能变电站辅助专家控制系统软件 V1.00",
+                    IDC_STATIC,35,36,193,8,SS_NOPREFIX
+END
+
+IDD_VIDEOPLAYER_DIALOG DIALOGEX 0, 0, 663, 368
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "视频管理与回放"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,5,369,356
+    LTEXT           "开始时间：",IDC_STATIC,15,26,41,8
+    LTEXT           "结束时间：",IDC_STATIC,183,26,41,8
+    CONTROL         "DateTimePicker1",IDC_DPT_STARTTIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,72,24,100,15
+    CONTROL         "DateTimePicker1",IDC_DPT_ENDTIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,234,24,100,15
+    CONTROL         "全部",IDC_CHECK_ALLVIDEO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,343,26,32,10
+    CONTROL         "List1",IDC_LIST_VIDEOFILE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,13,96,357,258
+    PUSHBUTTON      "查找",IDC_BTN_FINDVIDEO,41,72,50,14
+    PUSHBUTTON      "删除",IDC_BTN_DELONE,191,72,50,14
+    PUSHBUTTON      "删除全部",IDC_BTN_DELALL,266,72,50,14
+    LTEXT           "",IDC_STATIC_WNDPLAY01,380,63,274,229,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "VIDEO 02",IDC_STATIC_WNDPLAY02,323,0,48,12,NOT 
+                    WS_VISIBLE,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT_VIDEOPATH,72,46,246,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_BTN_VIDEOPATH,319,45,15,14
+    LTEXT           "录像文件路径：",IDC_STATIC,15,47,57,8
+    CONTROL         "Slider1",IDC_SLIDER_PLAYPROGRESS,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,376,
+                    302,279,13
+    PUSHBUTTON      "Play",IDC_BTN_PLAY,380,319,19,18,BS_ICON
+    PUSHBUTTON      "Stop",IDC_BTN_STOP,402,319,19,18,BS_ICON
+    PUSHBUTTON      "Slow",IDC_BTN_SLOW,431,319,19,18,BS_ICON
+    PUSHBUTTON      "Fast",IDC_BTN_FAST,453,319,19,18,BS_ICON
+    PUSHBUTTON      "Cap",IDC_BTN_CAPPIC,482,319,19,18,BS_ICON
+    PUSHBUTTON      "StepB",IDC_BTN_STEPBACK,511,319,19,18,BS_ICON | NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "StepF",IDC_BTN_STEPFORWARD,533,319,19,18,BS_ICON | NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "Sound",IDC_BTN_SOUND,562,319,19,18,BS_ICON
+    CONTROL         "Slider2",IDC_SLIDER_VOLUME,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,582,322,73,12
+    RTEXT           "",IDC_STATIC_STATUS01,380,339,272,16,0,WS_EX_CLIENTEDGE
+    GROUPBOX        "",IDC_STATIC,375,54,283,307
+    LTEXT           "视频管理与回放软件 V0.05.101025",IDC_STATIC_ABOUT,384,
+                    18,168,15
+    LTEXT           "Static",IDC_STATIC_TIME,495,38,157,15
+    GROUPBOX        "",IDC_STATIC,375,5,283,53
+    GROUPBOX        "",IDC_STATIC,7,63,369,27
+    PUSHBUTTON      "停止查找",IDC_BTN_STOPFINDVIDEO,116,72,50,14,
+                    WS_DISABLED
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,5,0
+ PRODUCTVERSION 0,0,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "NTS-900I系统 VideoPlayer.V0.05.101207\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VideoPlayer\0"
+            VALUE "FileVersion", "0, 0, 5, 0\0"
+            VALUE "InternalName", "VideoPlayer\0"
+            VALUE "LegalCopyright", "南京天溯自动化控制系统有限公司 版权所有 2003-2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VideoPlayer.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "VideoPlayer 应用程序\0"
+            VALUE "ProductVersion", "0, 0, 5, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_VIDEOPLAYER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 656
+        BOTTOMMARGIN, 361
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 VideoPlayer(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\VideoPlayer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

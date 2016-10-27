@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DVSShow - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/DVSShow.res" /d "NDEBUG" /d "_AFXDLL" "H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DVSShow.rc"" 
+Creating temporary file "C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14B.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I "..\..\compile\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/DVSShow.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DlgOutput.cpp"
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DlgVideo1.cpp"
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DVSShow.cpp"
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\MainFrm.cpp"
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\LeftCoolBar\scbarg.cpp"
+"H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\LeftCoolBar\sizecbar.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14B.tmp" 
+Creating temporary file "C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14C.tmp" with contents
+[
+GdiPlus.lib HCNetSDK.lib PlayCtrl.lib ws2_32.lib DsSdk.lib winmm.lib GdiPlus.lib ntsdll.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release/DVSShow.pdb" /debug /machine:I386 /out:"Release/DVSShow.exe" /libpath:"..\..\compile\lib" 
+".\Release\AW_CMultiViewSplitter.obj"
+".\Release\Control.obj"
+".\Release\DlgOutput.obj"
+".\Release\DlgPTZPreset.obj"
+".\Release\DlgVideo1.obj"
+".\Release\DlgVideoSettings.obj"
+".\Release\DVSShow.obj"
+".\Release\DVSShowDoc.obj"
+".\Release\DVSShowView.obj"
+".\Release\MainFrm.obj"
+".\Release\PTZButton.obj"
+".\Release\StdAfx.obj"
+".\Release\SysSettings.obj"
+".\Release\VideoOutPutView.obj"
+".\Release\CoolTabCtrl.obj"
+".\Release\scbarg.obj"
+".\Release\sizecbar.obj"
+".\Release\DVSShow.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DlgOutput.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DlgOutput.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+DlgVideo1.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DlgVideo1.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+DVSShow.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\DVSShow.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+MainFrm.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\MainFrm.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+scbarg.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\LeftCoolBar\scbarg.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+sizecbar.cpp
+H:\NTS-9000V1.1\trunk\5.Coding\src\DVSShow_U\LeftCoolBar\sizecbar.cpp(4) : fatal error C1853: 'Release/DVSShow.pch' is not a precompiled header file created with this compiler
+Generating Code...
+Error executing cl.exe.
+Creating temporary file "C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14D.tmp" with contents
+[
+/nologo /o"Release/DVSShow.bsc" 
+".\Release\StdAfx.sbr"
+".\Release\AW_CMultiViewSplitter.sbr"
+".\Release\Control.sbr"
+".\Release\DlgOutput.sbr"
+".\Release\DlgPTZPreset.sbr"
+".\Release\DlgVideo1.sbr"
+".\Release\DlgVideoSettings.sbr"
+".\Release\DVSShow.sbr"
+".\Release\DVSShowDoc.sbr"
+".\Release\DVSShowView.sbr"
+".\Release\MainFrm.sbr"
+".\Release\PTZButton.sbr"
+".\Release\SysSettings.sbr"
+".\Release\VideoOutPutView.sbr"
+".\Release\CoolTabCtrl.sbr"
+".\Release\scbarg.sbr"
+".\Release\sizecbar.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\CHENJX\LOCALS~1\Temp\RSP14D.tmp"
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Release\DlgOutput.sbr': No such file or directory
+Error executing bscmake.exe.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+DVSShow.exe - 7 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

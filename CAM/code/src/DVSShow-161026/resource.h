@@ -1,0 +1,124 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by DVSShow.rc
+//
+#define IDD_ABOUTBOX                    100
+#define IDR_MAINFRAME1                  127
+#define IDR_MAINFRAME                   128
+#define IDR_DVSSHOTYPE                  129
+#define IDS_DVSSHOW                     129
+#define IDD_DLG_VIDEO1                  130
+#define IDS_STRING130                   130
+#define IDD_DLG_OUTPUT                  131
+#define IDS_STRING131                   131
+#define IDD_DIALOG1                     132
+#define IDD_DLG_SETTINGS                132
+#define IDS_STRING132                   132
+#define IDI_ICON_START                  133
+#define IDI_ICON_STOP                   134
+#define IDI_ICON_SETTINGS               135
+#define IDI_ICON_ABOUT                  136
+#define IDI_ICON_EXIT                   137
+#define IDI_ICON_CAPPIC                 138
+#define IDD_DLG_CONTROL                 139
+#define IDR_MENU_RMENU1                 141
+#define IDD_DLG_PTZPRESET               142
+#define IDB_IL_TREE                     144
+#define IDB_BMP_CAMERA                  145
+#define IDD_DLG_OUTPUT_CTRL             146
+#define IDD_DLG_VIDEOSETTINGS           147
+#define IDB_BITMAP2                     150
+#define IDB_BITMAPBAR                   150
+#define IDB_BITMAP1                     151
+#define IDB_TREE_TAB                    151
+#define IDB_BITMAP3                     152
+#define IDB_BITMAP_BAR                  152
+#define IDR_MENU1                       160
+#define IDR_TRAYMENU                    160
+#define IDD_DIALOG2                     161
+#define IDD_DLG_ALARM                   161
+#define IDC_BTN_DEFAULT                 1000
+#define IDC_BTN_ADD                     1000
+#define IDC_STATIC_FLAG                 1001
+#define IDC_BTN_DELETE                  1001
+#define IDC_SLIDER_BRIGHTNESS           1002
+#define IDC_BTN_POINT                   1002
+#define IDC_SLIDER_HUE                  1003
+#define IDC_SLIDER3                     1004
+#define IDC_SLIDER_SATURATION           1004
+#define IDC_SLIDER_CONTRAST             1005
+#define IDC_EDIT_PICPATH                1006
+#define IDC_BTN_PICPATHSEL              1007
+#define IDC_EDIT_RECORDPATH             1008
+#define IDC_BTN_RECORDSELPATH           1009
+#define IDC_COMBO_SPEED                 1010
+#define IDC_CHECK_CAPPIC                1011
+#define IDC_COMBO_PTZPRESET             1013
+#define IDC_CONTROLBAR                  1014
+#define IDC_STATIC_PREVIEWBG            1014
+#define IDC_TABCTRLBAR                  1015
+#define IDC_COMBO_WNDNUM                1017
+#define IDC_CHECK_SGVIDEO               1019
+#define IDC_EDIT_TIME_STOPREC           1022
+#define IDC_EDIT_TIME_STOPVIDEO         1023
+#define IDC_STATIC_TIME_STOPREC         1024
+#define IDC_STATIC_TIME_STOPVIDEO       1025
+#define IDC_BTN_OK                      1026
+#define IDC_BTN_APP_SGVIDEO             1028
+#define IDC_STATIC_INSTRUCTION          1029
+#define IDC_STATIC_TIME                 1030
+#define IDC_STATIC_INSTRUCTION2         1030
+#define IDC_CHECK_STARTRECORD           1031
+#define IDC_COMBO_VIDEOWNDNUM           1032
+#define IDC_BUTTON1                     1041
+#define IDC_BUTTON_SETSPEED             1041
+#define IDC_LIST1                       1042
+#define IDC_LIST_RTALARM                1042
+#define IDC_BTN_PTZ_UP                  1100
+#define IDC_BTN_PTZ_DOWN                1101
+#define IDC_BTN_PTZ_LEFT                1102
+#define IDC_BTN_PTZ_RIGHT               1103
+#define IDC_BTN_ZOOM_IN                 1104
+#define IDC_BTN_FOCUS_NEAR              1105
+#define IDC_BTN_IRIS_OPEN               1106
+#define IDC_BTN_ZOOM_OUT                1107
+#define IDC_BTN_FOCUS_FAR               1108
+#define IDC_BTN_IRIS_CLOSE              1109
+#define ID_VIDEO_START                  32771
+#define ID_VIDEO_STOP                   32772
+#define ID_SYS_ABOUT                    32773
+#define ID_SYS_EXIT                     32774
+#define ID_SET_SYSSETTINGS              32775
+#define ID_VIDEO_CAPPIC                 32776
+#define ID_VIDEO_CONTROL                32778
+#define ID_SYS_EXIT2                    32779
+#define ID_RMENU_CONTROL                32780
+#define ID_RMENU_START_TEMPRECORD       32781
+#define ID_RMENU_STOP_TEMPRECORD        32782
+#define ID_RMENU_STOPVIDEO              32783
+#define ID_RMENU_PRESET                 32784
+#define ID_VIEW_LEFT                    32785
+#define ID_SET_VIDEOWNDNUM              32787
+#define ID_SET_VIDEOSETTINGS            32792
+#define ID_VIEW_VIDEOPLAY               32793
+#define ID_CAP                          32795
+#define ID_SHOWORHIDEWND                32799
+#define ID_DESTROY                      32800
+#define IDC_LEFT_STATICTREE             32801
+#define ID_PLA                          32801
+#define IDC_WSB_TREE                    32802
+#define ID_VIEW_WORKSPACE               32803
+#define ID_VIEW_ALARM                   32804
+#define ID_CANCELALARM                  32805
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        162
+#define _APS_NEXT_COMMAND_VALUE         32806
+#define _APS_NEXT_CONTROL_VALUE         1043
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
