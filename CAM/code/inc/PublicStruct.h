@@ -67,6 +67,7 @@ typedef struct _NetworkDIDOInfoDef
 	char szIP[LENGTH_17];					//IP address
 	int	nPort;								//port
 	unsigned char cNum[PROTOCOL_TOTAL_NUM];	//DI/DO num,如是4路，num为(0, 3)
+	unsigned char cNumStat[PROTOCOL_TOTAL_NUM];	//DI/DO num,如是4路，num为(0, 3)
 	unsigned char cMaxNum;					//DI/DO最大路数，如4路、8路，目前模块BB3是4路的
 	unsigned char cAlarmValue;				//报警值，当此值为XX时，默认为告警，如设置为0（常闭），则变为1时为告警
 	char szDesc[LENGTH_129];				//description
@@ -134,8 +135,9 @@ typedef	std::map<long , DEV_INFO*> Devc_Map;   //id index number is database ind
 
 typedef struct tagVIDEOPARAM 
 {
-	LONG lChannel;//通道号
-	int nCameraNo;			// 摄像机编号
+	LONG	lChannel;			//通道号
+	int		nCameraNo;			//摄像机编号
+	long	lPlayWnd;			//播放窗口编号
 	DEV_INFO devinfo;
 } VIDEOPARAM;
 

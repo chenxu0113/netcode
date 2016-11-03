@@ -478,7 +478,7 @@ BOOL CDVSShowApp::InitNetworkDidoSocketConfig()
 
 			for (int j=0; j<nds.ndc.cMaxNum; j++)
 			{
-				nds.ndc.cNum[j] = bAlarmValue;	//模块上的第n个DO状态，默认为0
+				nds.ndc.cNum[j] = abs(bAlarmValue-1);	//模块上的第n个DO状态，默认为0
 			}
 			nds.bInitSuccess = FALSE;
 			nds.ndc.nPort = iPort;

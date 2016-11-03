@@ -120,8 +120,8 @@ void CSocketThread::ReceMsgProcess()
 				nds.ndc.cNum[i] = bValue;
 				Add2RtAlarm(&nds, i);	//产生实时告警
 			}
-			//设备上送的值等于告警值，推出视频，并开启录像，只要告警不取消，会一直弹出视频//?????
-			if (nds.ndc.cNum[i] == nds.ndc.cAlarmValue)
+			//设备上送的值等于告警值，推出视频，并开启录像，只要告警不取消，会一直弹出视频
+			if (nds.ndc.cNum[i] == nds.ndc.cAlarmValue && bRead)
 			{
 				StartRtVideo(&nds, i);
 			}
@@ -146,8 +146,10 @@ BOOL CSocketThread::StartRtVideo(const NetworkDIDOSocket* nds, int nNum)
 		return FALSE;
 
 	CDlgVideo1* pVideo1 = (CDlgVideo1*)theApp.GetDlgVideo1();//chenxu ??????
-	if (!theApp.m_dlgOutput[pVideo1->m_nSubWndIndex].m_bStartVideo)//已经有视频存在，不再推出
-		return FALSE;
+	//if (!theApp.m_dlgOutput[pVideo1->m_nSubWndIndex].m_bStartVideo)//已经有视频存在，不再推出
+	//{
+	//	return FALSE;
+	//}
 
 	CString sIp = "";
 	LinkInfoDef lid;
@@ -155,6 +157,7 @@ BOOL CSocketThread::StartRtVideo(const NetworkDIDOSocket* nds, int nNum)
 	AfxGetApp()->DoWaitCursor(1);
 	//通过传入的网络DI/DO模块的IP、点号信息，找到摄像机与网络模块对应关系表中的摄像机IP、channel，从而获取摄像机VIDEOPARAM
 	POSITION pos = theApp.m_mapLinkInfoDef.GetStartPosition();
+	BOOL bFind = FALSE;
 	while(pos)
 	{
 		sIp = "";
@@ -162,8 +165,14 @@ BOOL CSocketThread::StartRtVideo(const NetworkDIDOSocket* nds, int nNum)
 		theApp.m_mapLinkInfoDef.GetNextAssoc(pos, sIp, lid);
 		if((strcmp(lid.cNetworkSocketIP, nds->ndc.szIP) == 0) && (lid.bNetworkNum == nNum))
 		{
+			bFind = TRUE;
 			break;
 		}
+
+	}
+	if (bFind == FALSE)
+	{
+		return FALSE;
 	}
 	CString sKey = "";
 	VIDEOPARAM* video = NULL;
@@ -174,7 +183,19 @@ BOOL CSocketThread::StartRtVideo(const NetworkDIDOSocket* nds, int nNum)
 		AfxGetApp()->DoWaitCursor(-1);
 		return FALSE;
 	}
-
+	if (video->lPlayWnd != -1)
+	{
+		if (!theApp.m_dlgOutput[video->lPlayWnd].m_bStartVideo)//已经有视频存在，不再推出
+		{
+			//开启临时录像
+			if (theApp.m_bnStartTempRec)
+			{
+				theApp.m_dlgOutput[video->lPlayWnd].StartLocalRecord();
+			}
+			theApp.m_dlgOutput[video->lPlayWnd].m_nAlarmFlashCount = ALARM_FLASH_TIME;
+			return FALSE;
+		}
+	}
 	pVideo1->StartRTVideoEx(video, -1, FALSE, STYLE_FLASH);
 
 	AfxGetApp()->DoWaitCursor(-1);

@@ -869,7 +869,13 @@ void CDlgOutput::OnCancelalarm()
 	for (int i=0; i<nds.ndc.cMaxNum; i++)
 	{
 		if (i != lid.bNetworkNum)
+		{
 			bValue = bValue + nds.ndc.cNum[i] * (BYTE)pow(2.0, i);//2-代表2进制
+		}
+		else
+		{
+			bValue = bValue + abs(nds.ndc.cNum[i]-1) * (BYTE)pow(2.0, i);//等于取反
+		}
 	}
 
 	memset(cSndBuf, 0, LENGTH_14);
@@ -916,5 +922,5 @@ void CDlgOutput::OnUpdateCancelalarm(CCmdUI *pCmdUI)
 	theApp.m_mapNetworkDidoSocket.Lookup(sIp, nds);
 	theApp.ReleaseNetworkDidoSocket();
 
-	pCmdUI->Enable(bRet & nds.ndc.cNum[lid.bNetworkNum]);
+	pCmdUI->Enable(bRet & (nds.ndc.cNum[lid.bNetworkNum]==nds.ndc.cAlarmValue));
 }

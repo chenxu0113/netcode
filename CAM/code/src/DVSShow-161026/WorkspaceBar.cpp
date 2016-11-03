@@ -297,6 +297,7 @@ BOOL CWorkspaceBar::InitTree(HTREEITEM hParent/* =TVI_ROOT */)
 			//video->devinfo.nPort = devInfo.nPort;
 			video->nCameraNo = iCamID;
 			video->devinfo = *pDev;
+			video->lPlayWnd = -1;
 
 			CString sKey = "";
 			sKey.Format("%s,%d", video->devinfo.szIpaddress, video->lChannel);

@@ -260,7 +260,22 @@ UINT CDlgVideo1::StartRTVideoEx(VIDEOPARAM* video, int nYxIndex,
 		video->nCameraNo = GetCamNoByYXIndex(nYxIndex);
 	}
 
+	//如果有手动选择的，则取消设备关联窗口
 	int nWndIndex = m_nSubWndIndex;
+	POSITION pos = theApp.m_mapVideoParam.GetStartPosition();
+	while(pos)
+	{
+		CString strKey =_T("");
+		VIDEOPARAM* videoFind = NULL;
+		theApp.m_mapVideoParam.GetNextAssoc(pos, strKey, videoFind);
+		if (videoFind->lPlayWnd == nWndIndex)
+		{
+			videoFind->lPlayWnd = -1;
+			break;
+		}
+	}
+
+	video->lPlayWnd = nWndIndex;
 	if (!bManual)	//如是手动，自动寻找空白窗口
 	{
 //		nWndIndex = GetSpaceWndNum();
@@ -500,6 +515,18 @@ int CDlgVideo1::Connect(DEV_INFO *pDev, int nChannel, int nWndIndex /* = -1 */)
 
 void CDlgVideo1::StopRTVideoEx(int nWndIndex)
 {
+	POSITION pos = theApp.m_mapVideoParam.GetStartPosition();
+	while(pos)
+	{
+		CString strKey =_T("");
+		VIDEOPARAM* videoFind = NULL;
+		theApp.m_mapVideoParam.GetNextAssoc(pos, strKey, videoFind);
+		if (videoFind->lPlayWnd == nWndIndex)
+		{
+			videoFind->lPlayWnd = -1;
+			break;
+		}
+	}
 	VIDEOPARAM videoParam;
 	UINT nRet = 0;
 

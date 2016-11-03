@@ -302,6 +302,7 @@ void CCamLinkSettings::OnAddModule()
 	video->lChannel = _tstoi(strChanID);
 	video->nCameraNo = iCamId+1;
 	video->devinfo = *pDev;
+	video->lPlayWnd = -1;
 
 	CString sKey = "";
 	sKey.Format("%s,%d", video->devinfo.szIpaddress, video->lChannel);
@@ -450,6 +451,7 @@ void CCamLinkSettings::OnModifyModule()
 	video->lChannel = _tstoi(strChanID);
 	video->nCameraNo = m_curID;
 	video->devinfo = *pDev;
+	video->lPlayWnd = -1;
 
 	CString sKey = "";
 	sKey.Format("%s,%d", video->devinfo.szIpaddress, video->lChannel);

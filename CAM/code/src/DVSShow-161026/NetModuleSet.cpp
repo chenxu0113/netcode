@@ -262,7 +262,7 @@ void CNetModuleSettings::OnAddModule()
 
 		for (int j=0; j<nds.ndc.cMaxNum; j++)
 		{
-			nds.ndc.cNum[j] = _tstoi(strAlarmValye);	//模块上的第n个DO状态，默认为0
+			nds.ndc.cNum[j] = abs(_tstoi(strAlarmValye)-1);	//模块上的第n个DO状态，默认为0
 		}
 		nds.bInitSuccess = FALSE;
 		nds.ndc.nPort = _tstoi(strPort);
@@ -376,7 +376,8 @@ void CNetModuleSettings::OnModifyModule()
 
 		for (int j=0; j<nds.ndc.cMaxNum; j++)
 		{
-			nds.ndc.cNum[j] = _tstoi(strAlarmValye);	//模块上的第n个DO状态，默认为0
+			nds.ndc.cNum[j] = abs(_tstoi(strAlarmValye)-1);	
+
 		}
 		nds.bInitSuccess = FALSE;
 		nds.ndc.nPort = _tstoi(strPort);
