@@ -241,6 +241,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\CamLinkSet.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\CamWndMgr.cpp"
 				>
 			</File>
@@ -449,6 +453,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\NetModuleSet.cpp"
+				>
+			</File>
+			<File
 				RelativePath="PTZButton.cpp"
 				>
 				<FileConfiguration
@@ -535,6 +543,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\CamLinkSet.h"
+				>
+			</File>
+			<File
 				RelativePath=".\CamWndMgr.h"
 				>
 			</File>
@@ -588,6 +600,10 @@
 			</File>
 			<File
 				RelativePath="..\..\inc\Markup.h"
+				>
+			</File>
+			<File
+				RelativePath=".\NetModuleSet.h"
 				>
 			</File>
 			<File

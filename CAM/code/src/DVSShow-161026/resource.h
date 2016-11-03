@@ -2,6 +2,12 @@
 // Microsoft Visual C++ generated include file.
 // Used by DVSShow.rc
 //
+#define IDOK2                           3
+#define IDMODIFY                        3
+#define ID_CAM_ADD                      3
+#define IDOK3                           4
+#define IDDEL                           4
+#define ID_CAM_ADD2                     4
 #define IDD_ABOUTBOX                    100
 #define IDR_MAINFRAME1                  127
 #define IDR_MAINFRAME                   128
@@ -37,6 +43,10 @@
 #define IDR_TRAYMENU                    160
 #define IDD_DIALOG2                     161
 #define IDD_DLG_ALARM                   161
+#define IDD_DIG_NETMOD_SET              162
+#define AM                              163
+#define IDR_ADD_CAM                     163
+#define IDD_CAM_SETTING                 164
 #define IDC_BTN_DEFAULT                 1000
 #define IDC_BTN_ADD                     1000
 #define IDC_STATIC_FLAG                 1001
@@ -74,6 +84,40 @@
 #define IDC_BUTTON_SETSPEED             1041
 #define IDC_LIST1                       1042
 #define IDC_LIST_RTALARM                1042
+#define IDC_IPADDRESS_NET               1043
+#define IDC_EDIT_PORT                   1044
+#define IDC_LISTCTRL_NET                1048
+#define IDC_COMBO_DOBUM                 1050
+#define IDC_COMBO_DONUM                 1050
+#define IDC_CHECK05                     1052
+#define IDC_EDIT                        1053
+#define IDC_EDIT_LISTITEM               1053
+#define IDC_CHECK02                     1054
+#define IDADD                           1054
+#define IDC_CHECK03                     1055
+#define IDC_COMBO_NETIP                 1055
+#define IDC_CHECK07                     1056
+#define IDC_IPADDRESS_CAM               1056
+#define IDC_CHECK06                     1057
+#define IDC_EDIT_TOTALCHANUM            1057
+#define IDC_CHECK01                     1058
+#define IDC_EDIT_CNAID                  1058
+#define IDC_CHECK11                     1059
+#define IDC_COMBO_NETDOID               1059
+#define IDC_CHECK10                     1060
+#define IDC_EDIT_CAM_PORT               1060
+#define IDC_CHECK09                     1061
+#define ID_CAM_DEL                      1061
+#define IDC_CHECK14                     1062
+#define ID_CAM_MOD                      1062
+#define IDC_CHECK15                     1063
+#define IDC_LISTCTRL_CAM                1063
+#define IDC_CHECK12                     1064
+#define IDC_CHECK08                     1065
+#define IDC_CHECK13                     1066
+#define IDC_CHECK00                     1067
+#define IDC_CHECK04                     1068
+#define IDC_CHECK20                     1069
 #define IDC_BTN_PTZ_UP                  1100
 #define IDC_BTN_PTZ_DOWN                1101
 #define IDC_BTN_PTZ_LEFT                1102
@@ -110,15 +154,26 @@
 #define ID_VIEW_WORKSPACE               32803
 #define ID_VIEW_ALARM                   32804
 #define ID_CANCELALARM                  32805
+#define ID_32806                        32806
+#define ID_NET                          32807
+#define ID_NET_SET                      32808
+#define ID_TREE_32809                   32809
+#define ID_TREE_32810                   32810
+#define ID_TREE_32811                   32811
+#define ID_ADD_Cam                      32812
+#define ID_MOD_CAM                      32813
+#define ID_DEL_CAM                      32814
+#define ID_32815                        32815
+#define ID_CAMLINK_SET                  32816
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        162
-#define _APS_NEXT_COMMAND_VALUE         32806
-#define _APS_NEXT_CONTROL_VALUE         1043
+#define _APS_NEXT_RESOURCE_VALUE        165
+#define _APS_NEXT_COMMAND_VALUE         32817
+#define _APS_NEXT_CONTROL_VALUE         1064
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

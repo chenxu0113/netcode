@@ -9,6 +9,7 @@
 #include "DVSShowView.h"
 #include "DlgVideo1.h"
 #include "DlgOutput.h"
+#include "Markup.h"
 
 BOOL SplitParams(const TCHAR *szSrcCmd, TCHAR szDstCmd[][64], int *pnCount);
 BOOL ParseInputString(const TCHAR strInput[][64], int nCount, InputParams* pParams);
@@ -67,6 +68,7 @@ CDVSShowApp::CDVSShowApp()
 {
 	InitializeCriticalSection(&m_csMapCCamWndMgr);
 	InitializeCriticalSection(&m_csNetworkDidoSocket);
+	InitializeCriticalSection(&m_csCamLinkSet);
 	m_sPicPath = _T("");
 	m_sRecordPath = _T("");
 	m_nStopRec = 0;
@@ -84,6 +86,7 @@ CDVSShowApp::CDVSShowApp()
 	m_mapNetworkDidoSocket.RemoveAll();
 	m_mapLinkInfoDef.RemoveAll();
 	m_mapVideoParam.RemoveAll();
+	m_iVideoComboRow = 1;
 
 	OSVERSIONINFO osvi;
 	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
@@ -425,39 +428,66 @@ BOOL CDVSShowApp::InitIniConfig()
 
 BOOL CDVSShowApp::InitNetworkDidoSocketConfig()
 {
-	int i = 0;
-	int j = 0;
-	NetworkDIDOSocket nds;
-	SYSTEMTIME st;
-
-	GetLocalTime(&st);
 
 	CaptureNetworkDidoSocket();
 	m_mapNetworkDidoSocket.RemoveAll();
 	ReleaseNetworkDidoSocket();
-	for (i=0; i<1; i++)
+
+	CMarkup xml;
+
+	if(xml.Load(GET_MODULE_FILE_INFO.strPath + "NetModulsInfo.xml"))
 	{
-		memset(&nds, 0, sizeof(NetworkDIDOSocket));
+		while(xml.FindChildElem("NetModulINFO"))
+		{		
+			xml.IntoElem();
+			int iID=0;
+			CString netModuleIp = _T("");
+			int iPort = 0;
+			int iWorkDoNum = 0;
+			BOOL bAlarmValue = FALSE;
 
-		nds.nIndex = j ++;
-		nds.ndc.nID = i + 1;	//?????
-		nds.ndc.cMaxNum = 4;
-		nds.ndc.cAlarmValue = STATUS_OPEN;
-		sprintf(nds.ndc.szName, "网络模块%02d", i+1);
-		strcpy(nds.ndc.szIP, "10.0.0.10");
+			
+			xml.FindChildElem("ID");
+			iID=atoi(xml.GetChildData());		
 
-		for (int j=0; j<nds.ndc.cMaxNum; j++)
-		{
-			nds.ndc.cNum[j] = STATUS_CLOSE;	//模块上的第n个DO状态，默认为0
-		}
-		nds.bInitSuccess = FALSE;
-		nds.ndc.nPort = 5022;
-		nds.st = st;
+			xml.FindChildElem("ip");
+			netModuleIp=xml.GetChildData();
 
-		CString sIP(nds.ndc.szIP);
-		CaptureNetworkDidoSocket();
-		m_mapNetworkDidoSocket.SetAt(sIP, nds);
-		ReleaseNetworkDidoSocket();
+			xml.FindChildElem("port");
+			iPort=atoi(xml.GetChildData());
+
+			xml.FindChildElem("DoNums");
+			iWorkDoNum=atoi(xml.GetChildData());
+
+			xml.FindChildElem("DoAlarmValue");
+			bAlarmValue=atoi(xml.GetChildData());
+			xml.OutOfElem();
+			NetworkDIDOSocket nds;
+			SYSTEMTIME st;
+
+			GetLocalTime(&st);
+
+			memset(&nds, 0, sizeof(NetworkDIDOSocket));
+
+			nds.nIndex = iID;
+			nds.ndc.nID = iID;	//?????
+			nds.ndc.cMaxNum = iWorkDoNum;
+			nds.ndc.cAlarmValue = bAlarmValue;
+			sprintf(nds.ndc.szName, "网络模块%02d", iID);
+			strcpy(nds.ndc.szIP,netModuleIp);
+
+			for (int j=0; j<nds.ndc.cMaxNum; j++)
+			{
+				nds.ndc.cNum[j] = bAlarmValue;	//模块上的第n个DO状态，默认为0
+			}
+			nds.bInitSuccess = FALSE;
+			nds.ndc.nPort = iPort;
+			nds.st = st;
+			CString sIP(nds.ndc.szIP);
+			CaptureNetworkDidoSocket();
+			m_mapNetworkDidoSocket.SetAt(sIP, nds);
+			ReleaseNetworkDidoSocket();
+			}
 	}
 
 	return TRUE;
@@ -465,24 +495,24 @@ BOOL CDVSShowApp::InitNetworkDidoSocketConfig()
 
 BOOL CDVSShowApp::InitLinkInfoConfig()
 {
-	int i = 0;
-	LinkInfoDef lid;
+	//int i = 0;
+	//LinkInfoDef lid;
 
-	m_mapLinkInfoDef.RemoveAll();
-	for (i=0; i<1; i++)
-	{
-		memset(&lid, 0, sizeof(LinkInfoDef));
+	//m_mapLinkInfoDef.RemoveAll();
+	//for (i=0; i<1; i++)
+	//{
+	//	memset(&lid, 0, sizeof(LinkInfoDef));
 
-		lid.bChannel = 0;
-		lid.bNetworkNum = 1;			//?????
-		strcpy(lid.cCamIP, "10.0.0.203");
-		strcpy(lid.cNetworkSocketIP, "10.0.0.10");
-		lid.nCamID = 1;
+	//	lid.bChannel = 0;
+	//	lid.bNetworkNum = 1;			//?????
+	//	strcpy(lid.cCamIP, "10.0.0.203");
+	//	strcpy(lid.cNetworkSocketIP, "10.0.0.10");
+	//	lid.nCamID = 1;
 
-		CString sIP = "";
-		sIP.Format("%s,%d", lid.cCamIP, lid.bChannel);
-		m_mapLinkInfoDef.SetAt(sIP, lid);
-	}
+	//	CString sIP = "";
+	//	sIP.Format("%s,%d", lid.cCamIP, lid.bChannel);
+	//	m_mapLinkInfoDef.SetAt(sIP, lid);
+	//}
 
 	return TRUE;
 }

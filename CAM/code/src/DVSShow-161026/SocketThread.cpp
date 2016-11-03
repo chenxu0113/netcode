@@ -145,7 +145,7 @@ BOOL CSocketThread::StartRtVideo(const NetworkDIDOSocket* nds, int nNum)
 	if (NULL == nds || nNum < 0)
 		return FALSE;
 
-	CDlgVideo1* pVideo1 = (CDlgVideo1*)theApp.GetDlgVideo1();
+	CDlgVideo1* pVideo1 = (CDlgVideo1*)theApp.GetDlgVideo1();//chenxu ??????
 	if (!theApp.m_dlgOutput[pVideo1->m_nSubWndIndex].m_bStartVideo)//已经有视频存在，不再推出
 		return FALSE;
 

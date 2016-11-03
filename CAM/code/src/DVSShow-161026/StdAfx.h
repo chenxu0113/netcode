@@ -38,6 +38,9 @@ using namespace std;
 #include "netsdk.h"
 #include "H264Play.h"
 
+#include <iostream>  
+#include <sstream> 
+#include <vector>
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

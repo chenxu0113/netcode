@@ -61,7 +61,7 @@ BOOL CDlgVideoSettings::OnInitDialog()
 		m_wndVideoWndNum.InsertString(i-1, str);
 		m_wndVideoWndNum.SetItemData(i-1, i*i);
 	}
-	m_wndVideoWndNum.SetCurSel(1);
+	m_wndVideoWndNum.SetCurSel(theApp.m_iVideoComboRow);
 	//OnSelchangeComboVideowndnum();
 	
 	return TRUE;  // return TRUE unless you set the focus to a control
@@ -111,4 +111,5 @@ void CDlgVideoSettings::OnSelchangeComboVideowndnum()
 	if (NULL == pVideo1)
 		return;
 	pVideo1->ArrageOutputWnds(nNum);
+	theApp.m_iVideoComboRow = nCurSel;
 }

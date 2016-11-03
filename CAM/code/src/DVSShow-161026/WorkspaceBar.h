@@ -15,6 +15,7 @@ class CWorkspaceBar : public CBCGPDockingControlBar
 public:
 	CWorkspaceBar();
 	CTreeCtrl	m_wndTree;
+	HTREEITEM FindTreeItem(HTREEITEM item,CString& strText);
 // Attributes
 protected:
 	

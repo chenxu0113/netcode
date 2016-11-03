@@ -13,6 +13,8 @@
 #include "LeftCoolBar/CoolTabCtrl.h"
 #include "DlgVideo1.h"
 #include "SysSettings.h"
+#include "NetModuleSet.h"
+#include "CamLinkSet.h"
 #include "Control.h"
 #include "DlgVideoSettings.h"
 #include "WorkspaceBar.h"
@@ -83,6 +85,8 @@ protected:
 	afx_msg LRESULT OnReceiveInfo(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnStartVideo();
 	afx_msg void OnSetSysSettings();
+	afx_msg void OnSetNetModul();
+	afx_msg void OnSetCamLink();
 	afx_msg void OnSysAbout();
 	afx_msg void OnSysExit();
 	afx_msg void OnCapturePic();

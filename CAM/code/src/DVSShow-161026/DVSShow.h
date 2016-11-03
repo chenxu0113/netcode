@@ -67,6 +67,10 @@ public:
 	map<int, CCamWndMgr *>	m_MapCCamWndMgr;
 	CRITICAL_SECTION m_csMapCCamWndMgr;
 	CRITICAL_SECTION m_csNetworkDidoSocket;
+	CRITICAL_SECTION m_csCamLinkSet;
+
+	int				 m_iVideoComboRow;
+
 // Methods
 public:
 	void			CaptureNetworkDidoSocket();

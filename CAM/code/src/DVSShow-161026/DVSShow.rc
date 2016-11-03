@@ -8,7 +8,6 @@
 // Generated from the TEXTINCLUDE 2 resource.
 //
 #include "afxres.h"
-
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
@@ -124,6 +123,8 @@ BEGIN
     BEGIN
         MENUITEM "系统设置(&S)",                    ID_SET_SYSSETTINGS
         MENUITEM "视频设置(&V)",                    ID_SET_VIDEOSETTINGS
+        MENUITEM "网络模块设置(&N)",                  ID_NET_SET
+        MENUITEM "摄像机设置(&C)",                   ID_CAMLINK_SET
     END
     POPUP "查看(&V)"
     BEGIN
@@ -164,6 +165,16 @@ BEGIN
         MENUITEM "关于",                          ID_APP_ABOUT
         MENUITEM SEPARATOR
         MENUITEM "退出",                          ID_DESTROY
+    END
+END
+
+IDR_ADD_CAM MENU 
+BEGIN
+    POPUP "Tree"
+    BEGIN
+        MENUITEM "添加Camera",                    ID_ADD_Cam
+        MENUITEM "修改Camera",                    ID_MOD_CAM
+        MENUITEM "删除Camera",                    ID_DEL_CAM
     END
 END
 
@@ -294,6 +305,49 @@ BEGIN
     LISTBOX         IDC_LIST_RTALARM,0,0,423,44,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 END
 
+IDD_DIG_NETMOD_SET DIALOGEX 0, 0, 365, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网络模块设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "添加",IDADD,307,162,50,14
+    LTEXT           "网络模块IP：",IDC_STATIC,195,14,48,8
+    CONTROL         "",IDC_IPADDRESS_NET,"SysIPAddress32",WS_TABSTOP,250,14,100,15
+    LTEXT           "端口：",IDC_STATIC,195,37,25,8
+    EDITTEXT        IDC_EDIT_PORT,250,38,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "输出端口数：",IDC_STATIC,195,65,49,8
+    CONTROL         "",IDC_LISTCTRL_NET,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,183,171
+    COMBOBOX        IDC_COMBO_DONUM,250,64,48,64,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "告警值设置:",IDC_STATIC,195,91,44,8
+    CONTROL         "常闭",IDC_CHECK00,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,250,91,32,10
+    DEFPUSHBUTTON   "修改",IDMODIFY,251,162,50,14
+    EDITTEXT        IDC_EDIT_LISTITEM,298,39,40,14,ES_AUTOHSCROLL | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "删除",IDDEL,198,162,50,14
+END
+
+IDD_CAM_SETTING DIALOGEX 0, 0, 485, 247
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "删除",ID_CAM_DEL,309,216,50,14
+    CONTROL         "",IDC_LISTCTRL_CAM,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,284,233
+    LTEXT           "网络模块IP：",IDC_STATIC,305,118,48,8
+    COMBOBOX        IDC_COMBO_NETIP,358,116,77,124,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "摄像机IP：",IDC_STATIC,305,14,40,8
+    CONTROL         "",IDC_IPADDRESS_CAM,"SysIPAddress32",WS_TABSTOP,358,14,100,15
+    LTEXT           "通道个数：",IDC_STATIC,305,71,41,8
+    EDITTEXT        IDC_EDIT_TOTALCHANUM,358,66,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "通道ID：",IDC_STATIC,305,93,32,8
+    EDITTEXT        IDC_EDIT_CNAID,358,92,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "端口号：",IDC_STATIC,305,42,33,8
+    LTEXT           "DO点号：",IDC_STATIC,305,146,35,8
+    COMBOBOX        IDC_COMBO_NETDOID,358,142,77,111,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CAM_PORT,358,41,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "添加",ID_CAM_ADD,423,216,50,14
+    DEFPUSHBUTTON   "修改",ID_CAM_MOD,367,216,50,14
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -375,6 +429,22 @@ BEGIN
         RIGHTMARGIN, 417
         TOPMARGIN, 7
         BOTTOMMARGIN, 38
+    END
+
+    IDD_DIG_NETMOD_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 357
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_CAM_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 478
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -514,6 +584,7 @@ END
 STRINGTABLE 
 BEGIN
     ID_VIEW_ALARM           "告警显示\n告警显示"
+    ID_NET_SET              "网络模块相关设置\n网络模块相关设置"
 END
 
 STRINGTABLE 

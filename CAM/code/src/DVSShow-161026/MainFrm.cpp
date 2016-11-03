@@ -25,6 +25,8 @@ BEGIN_MESSAGE_MAP(CMainFrame, CBCGPFrameWnd)
 	ON_MESSAGE(WM_COPYDATA, OnReceiveInfo)
 	ON_COMMAND(ID_VIDEO_START, OnStartVideo)
 	ON_COMMAND(ID_SET_SYSSETTINGS, OnSetSysSettings)
+	ON_COMMAND(ID_NET_SET, OnSetNetModul)
+	ON_COMMAND(ID_CAMLINK_SET, OnSetCamLink)
 	ON_COMMAND(ID_SYS_ABOUT, OnSysAbout)
 	ON_COMMAND(ID_SYS_EXIT, OnSysExit)
 	ON_COMMAND(ID_VIDEO_CAPPIC, OnCapturePic)
@@ -286,6 +288,22 @@ void CMainFrame::OnSetSysSettings()
 	//// 创建设置对话框
 	CSysSettings dlg;
 	dlg.DoModal();
+}
+
+void CMainFrame::OnSetCamLink()
+{
+	//// 创建设置对话框
+	CCamLinkSettings dlg;
+	dlg.DoModal();
+	return;
+}
+
+void CMainFrame::OnSetNetModul()
+{
+	//// 创建设置对话框
+	CNetModuleSettings dlg;
+	dlg.DoModal();
+	return;
 }
 
 /////////////////////////////////////////////
