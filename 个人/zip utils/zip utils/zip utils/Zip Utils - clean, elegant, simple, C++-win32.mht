@@ -1,0 +1,917 @@
+From: <ÓÉ Windows Internet Explorer 7 ±£´æ>
+Subject: Zip Utils - clean, elegant, simple, C++/win32
+Date: Thu, 8 Jul 2010 22:55:35 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CB1EF0.AD361C60"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3664
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CB1EF0.AD361C60
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.wischik.com/lu/programmer/zip_utils.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Zip Utils - clean, elegant, simple, C++/win32</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312">
+<STYLE>BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+P {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H2 {
+	FONT-WEIGHT: bold; COLOR: #ff9900
+}
+H3 {
+	FONT-WEIGHT: bold; COLOR: #ff9900
+}
+H4 {
+	FONT-WEIGHT: bold; COLOR: #ff9900
+}
+H5 {
+	FONT-WEIGHT: bold; COLOR: #ff9900
+}
+H2 {
+	FONT-SIZE: 13pt
+}
+H3 {
+	FONT-SIZE: 12pt
+}
+H4 {
+	FONT-SIZE: 10pt; COLOR: black
+}
+PRE {
+	FONT-FAMILY: "Courier New", Courier, mono; WHITE-SPACE: pre; =
+BACKGROUND-COLOR: #fbedbb
+}
+CODE {
+	COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono
+}
+BODY {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+P {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H1 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H2 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H3 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H4 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H5 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+H6 {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+LI {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+TD {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+TH {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+DD {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+DT {
+	FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana, Helvetica, Arial, =
+sans-serif
+}
+BODY {
+	COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}
+LI {
+	LIST-STYLE-IMAGE: none
+}
+UL {
+	LIST-STYLE-IMAGE: none
+}
+OL {
+	LIST-STYLE-IMAGE: none
+}
+H1 {
+	FONT-WEIGHT: bold
+}
+H2 {
+	FONT-WEIGHT: bold
+}
+H3 {
+	FONT-WEIGHT: bold
+}
+H4 {
+	FONT-WEIGHT: bold
+}
+H5 {
+	FONT-WEIGHT: bold
+}
+TH {
+	FONT-WEIGHT: bold
+}
+H2 {
+	COLOR: #ff9900
+}
+H3 {
+	COLOR: #ff9900
+}
+H5 {
+	COLOR: #ff9900
+}
+H1 {
+	FONT-SIZE: 16pt
+}
+H2 {
+	FONT-SIZE: 13pt
+}
+H3 {
+	FONT-SIZE: 11pt; FONT-FAMILY: Arial, sans-serif
+}
+H4 {
+	FONT-SIZE: 10pt; MARGIN-BOTTOM: 2px
+}
+H5 {
+	FONT-SIZE: 9pt; MARGIN-BOTTOM: 2px
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 65%; COLOR: #626262
+}
+DD {
+	MARGIN-LEFT: 20px
+}
+PRE {
+	PADDING-RIGHT: 7pt; PADDING-LEFT: 7pt; BACKGROUND-IMAGE: =
+url(/images/codebg.gif); PADDING-BOTTOM: 7pt; FONT: 9pt "Courier New", =
+Courier, mono; WIDTH: 100%; PADDING-TOP: 7pt; WHITE-SPACE: pre; =
+BACKGROUND-COLOR: #fbedbb
+}
+CODE {
+	COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono
+}
+A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: underline
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.cpp-comment {
+	COLOR: green; FONT-STYLE: italic
+}
+.cs-comment {
+	COLOR: green; FONT-STYLE: italic
+}
+.vb-comment {
+	COLOR: green; FONT-STYLE: italic
+}
+.cpp-keyword {
+	COLOR: blue
+}
+.cs-keyword {
+	COLOR: blue
+}
+.vb-function {
+	COLOR: blue
+}
+.cpp-preprocessor {
+	COLOR: navy
+}
+.cs-preprocessor {
+	COLOR: navy
+}
+.cpp-string {
+	COLOR: purple
+}
+.cs-string {
+	COLOR: purple
+}
+.vb-string {
+	COLOR: purple
+}
+.cpp-literal {
+	COLOR: midnightblue
+}
+.cs-literal {
+	COLOR: midnightblue
+}
+.vb-literal {
+	COLOR: midnightblue
+}
+.vb-keyword {
+	FONT-WEIGHT: normal; COLOR: blue
+}
+.vb-statement {
+	FONT-WEIGHT: normal; COLOR: blue
+}
+</STYLE>
+
+<META content=3D"MSHTML 6.00.6000.20591" name=3DGENERATOR></HEAD>
+<BODY bgColor=3D#ffffff color=3D"#000000">
+<H1>Zip Utils - clean, elegant, simple, C++/win32</H1>
+<P>Adding zip/unzip easily, no LIBS or DLLs, with an elegant and simple=20
+API.<BR>This article can be found on CodeProject at <A=20
+href=3D"http://www.codeproject.com/useritems/zip_utils.asp">www.codeproje=
+ct.com/useritems/zip_utils.asp</A>,=20
+where there is also a discussion board.<BR>by Lucian Wischik, <A=20
+href=3D"http://www.wischik.com/lu">www.wischik.com/lu</A>.</P>
+<P><IMG height=3D207 alt=3D"zipping and unzipping in action!"=20
+src=3D"http://www.wischik.com/lu/programmer/zip_utils.gif" =
+width=3D540></P>
+<UL class=3Ddownload>
+  <LI><A =
+href=3D"http://www.wischik.com/lu/programmer/zip_utils_src.zip">Download =
+
+  source files - 216 Kb</A> </LI></UL>
+<H2>Introduction</H2>
+<P>This source code shows how to add zip/unzip functionality to your =
+programs.=20
+Lots of people have written their own wrappers around zip, and indeed =
+there are=20
+several articles on codeproject that are based on earlier versions of my =
+own=20
+code. How is this version different?</P>
+<UL>
+  <LI><STRONG>Clean packaging.</STRONG> There's one pair of files=20
+  <CODE>zip.cpp</CODE>,<CODE>zip.h</CODE> to add to your project if you =
+want=20
+  zip. Another pair <CODE>unzip.cpp</CODE>,<CODE>unzip.h</CODE> if you =
+want=20
+  unzip (or both if you want both!). There are <EM>NO</EM> additional =
+libraries=20
+  or DLLs to worry about.=20
+  <LI><STRONG>Clean API.</STRONG> Most other APIs around zip/unzip are =
+terrible.=20
+  This one is best. The API is short, clean, and in a familiar win32 =
+style. Most=20
+  other APIs wrap things up in classes, which is ugly overkill for such =
+a small=20
+  problem and always turns out too inflexible. Mine don't. See the code =
+snippets=20
+  below.=20
+  <LI><STRONG>Flexibility.</STRONG> With this code you can unzip from a =
+zip=20
+  that's in a diskfile, memory-buffer, pipe. You can unzip into a =
+diskfile,=20
+  memory-buffer or pipe. The same for creating zipfiles. This means that =
+at last=20
+  you don't need to write out your files to a temporary directory before =
+using=20
+  them! One noteworthy feature is that you can <EM>unzip directly from =
+an=20
+  embedded resource</EM> into a memory buffer or onto a diskfile, which =
+is great=20
+  for installers. Another is the ability to create your zip in =
+dynamically=20
+  growable memory backed by the system pagefile. Despite all this power, =
+the API=20
+  remains clean and simple. The power didn't come from just writing =
+wrappers=20
+  around other people's code. It came from restructuring the internals =
+of zlib=20
+  and info-zip source code. My code is unique in what it does here.=20
+  <LI><STRONG>Encryption.</STRONG> This version supports password-based =
+zip=20
+  encryption. Passwords are absent from many other zip libraries, =
+including=20
+  gzip.=20
+  <LI><STRONG>Unicode.</STRONG> This version supports unicode filenames. =
+
+  <LI><STRONG>Windows CE.</STRONG> This version works as it is under =
+Windows CE.=20
+  No need to alter makefiles or #defines, or worry about compatability =
+of any=20
+  LIB/DLL.=20
+  <LI><STRONG>Bugfixes.</STRONG> This code is based on gzip 1.1.4, which =
+fixes a=20
+  security vulnerability in 1.1.3. (An earlier version of my code used =
+1.1.3,=20
+  and has crept into other codeproject articles...) </LI></UL>
+<P>At its core my code uses zlib and info-zip. See at end for=20
+acknowledgements.</P>
+<H2>Using the code</H2>
+<P>To add zip functionality to your code, add the file =
+<CODE>zip.cpp</CODE> to=20
+your project, and <CODE><SPAN class=3Dcpp-preprocessor>#include=20
+"zip.h"</SPAN></CODE> to your source code.</P>
+<P>Similarly for unzipping, add the file <CODE>unzip.cpp</CODE> to the =
+project=20
+and <CODE><SPAN class=3Dcpp-preprocessor>#include =
+"unzip.h"</SPAN></CODE> to your=20
+source code. Zip and unzip can co-exist happily a single application. Or =
+you can=20
+omit one or the other if you're trying to save space.</P>
+<P>The following code snippets show how to use zip/unzip. They are taken =
+from=20
+one of the demo applications including in the download. It also has =
+project=20
+files for Visual Studio .NET and Borland C++Builder6 and Embedded Visual =
+C++ 3.=20
+The code snippets here use ASCII. But the functions all take arguments =
+of type=20
+TCHAR* rather than char*, so you can use it fine under Unicode.</P>
+<H3>Example 1 - create a zipfile from existing files</H3><PRE>  <SPAN =
+class=3Dcpp-comment>// We place the file "simple.bmp" inside, but =
+inside</SPAN>
+  <SPAN class=3Dcpp-comment>// the zipfile it will actually be called =
+"znsimple.bmp".</SPAN>
+  <SPAN class=3Dcpp-comment>// Similarly the textfile.</SPAN>
+
+  HZIP hz =3D CreateZip(<SPAN =
+class=3Dcpp-string>"simple1.zip"</SPAN>,<SPAN =
+class=3Dcpp-literal>0</SPAN>);
+  ZipAdd(hz,<SPAN class=3Dcpp-string>"znsimple.bmp"</SPAN>,  <SPAN =
+class=3Dcpp-string>"simple.bmp"</SPAN>);
+  ZipAdd(hz,<SPAN class=3Dcpp-string>"znsimple.txt"</SPAN>,  <SPAN =
+class=3Dcpp-string>"simple.txt"</SPAN>);
+  CloseZip(hz);
+</PRE>
+<H3>Example 2 - unzip a zipfile using the names it has inside =
+it</H3><PRE>  HZIP hz =3D OpenZip(<SPAN =
+class=3Dcpp-string>"\\simple1.zip"</SPAN>,<SPAN =
+class=3Dcpp-literal>0</SPAN>);
+  ZIPENTRY ze; GetZipItem(hz,-<SPAN =
+class=3Dcpp-literal>1</SPAN>,&amp;ze); <SPAN =
+class=3Dcpp-keyword>int</SPAN> numitems=3Dze.index;
+  <SPAN class=3Dcpp-comment>// -1 gives overall information about the =
+zipfile</SPAN>
+  <SPAN class=3Dcpp-keyword>for</SPAN> (<SPAN =
+class=3Dcpp-keyword>int</SPAN> zi=3D<SPAN class=3Dcpp-literal>0</SPAN>; =
+zi&lt;numitems; zi++)
+  { ZIPENTRY ze; GetZipItem(hz,zi,&amp;ze); <SPAN class=3Dcpp-comment>// =
+fetch individual details</SPAN>
+    UnzipItem(hz, zi, ze.name);         <SPAN class=3Dcpp-comment>// =
+e.g. the item's name.</SPAN>
+  }
+  CloseZip(hz);
+</PRE>
+<H3>Example 3- unzip from resource directly into memory</H3>
+<P>This technique is useful for small games, where you want to keep all=20
+resources bundled up inside the executable, but restricting the =
+size.</P>
+<P>Suppose we used a .rc with<BR><CODE><SPAN =
+class=3Dcpp-literal>1</SPAN> RCDATA=20
+<SPAN class=3Dcpp-string>"file.zip"</SPAN></CODE><BR>to embed the =
+zipfile as a=20
+resource. </P><PRE>  HRSRC hrsrc =3D =
+FindResource(hInstance,MAKEINTRESOURCE(<SPAN =
+class=3Dcpp-literal>1</SPAN>),RT_RCDATA);
+  HANDLE hglob =3D LoadResource(hInstance,hrsrc);
+  <SPAN class=3Dcpp-keyword>void</SPAN> *zipbuf =3D LockResource(hglob);
+  <SPAN class=3Dcpp-keyword>unsigned</SPAN> <SPAN =
+class=3Dcpp-keyword>int</SPAN> ziplen =3D =
+SizeofResource(hInstance,hrsrc);
+  hz =3D OpenZip(zipbuf, ziplen, <SPAN class=3Dcpp-literal>0</SPAN>);
+  ZIPENTRY ze; <SPAN class=3Dcpp-keyword>int</SPAN> i; =
+FindZipItem(hz,<SPAN class=3Dcpp-string>"sample.jpg"</SPAN>,<SPAN =
+class=3Dcpp-keyword>true</SPAN>,&amp;i,&amp;ze);
+  <SPAN class=3Dcpp-comment>// that lets us search for an item by =
+filename.</SPAN>
+  <SPAN class=3Dcpp-comment>// Now we unzip it to a membuffer.</SPAN>
+  <SPAN class=3Dcpp-keyword>char</SPAN> *ibuf =3D <SPAN =
+class=3Dcpp-keyword>new</SPAN> <SPAN =
+class=3Dcpp-keyword>char</SPAN>[ze.unc_size];
+  UnzipItem(hz,i, ibuf, ze.unc_size);
+  ...
+  <SPAN class=3Dcpp-keyword>delete</SPAN>[] ibuf;
+  CloseZip(hz);
+  <SPAN class=3Dcpp-comment>// note: no need to free resources obtained =
+through Find/Load/LockResource</SPAN>
+</PRE>
+<H3>Example 4 - unzip chunk by chunk to a membuffer</H3>
+<P>Normally when you call <CODE>UnzipItem(...)</CODE> it gives the =
+return-code=20
+ZR_OK. But if you gave it too small a buffer so that it couldn't fit it =
+all in,=20
+then it return ZR_MORE.</P><PRE>  <SPAN class=3Dcpp-keyword>char</SPAN> =
+buf[<SPAN class=3Dcpp-literal>1024</SPAN>]; ZRESULT zr=3DZR_MORE; <SPAN =
+class=3Dcpp-keyword>unsigned</SPAN> <SPAN =
+class=3Dcpp-keyword>long</SPAN> totsize=3D<SPAN =
+class=3Dcpp-literal>0</SPAN>;
+  <SPAN class=3Dcpp-keyword>while</SPAN> (zr=3D=3DZR_MORE)
+  { zr =3D UnzipItem(hz,i, buf,<SPAN class=3Dcpp-literal>1024</SPAN>);
+    <SPAN class=3Dcpp-keyword>unsigned</SPAN> <SPAN =
+class=3Dcpp-keyword>long</SPAN> bufsize=3D<SPAN =
+class=3Dcpp-literal>1024</SPAN>; <SPAN class=3Dcpp-keyword>if</SPAN> =
+(zr=3D=3DZR_OK) bufsize=3Dze.unc_size-totsize;
+    <SPAN class=3Dcpp-comment>... maybe write the buffer to a disk file =
+here</SPAN>
+    totsize+=3Dbufsize;
+  }
+</PRE>
+<P>One final option: if you compile with "ZIP_STD" defined for the =
+preprocessor,=20
+then zip and unzip will compile using solely stdlib -- with no windows=20
+dependencies. They can compile under linux with g++. Note that some of =
+the=20
+prototypes in zip.h and unzip.h will change accordingly: filetimes will =
+be=20
+time_t structures rather than FILETIME, and various functions will use =
+FILE*=20
+rather than HANDLE, and it doesn't support unicode or memory-mapping. =
+The=20
+example program "std" does this.</P>
+<H2>Common Questions</H2>
+<P><STRONG>STRICT?</STRONG> I think you should always compile with =
+STRICT (in=20
+project-settings/preprocessor/defines), and full warnings turned on. =
+Without=20
+STRICT, the HZIP handle becomes interchangeable with all other =
+handles.</P>
+<P><STRONG>How to show a progress dialog?</STRONG> One of the included =
+examples,=20
+"progress", shows how to do this.</P>
+<P><STRONG>How to add/remove files from an existing zipfile?</STRONG> =
+The=20
+zip_utils currently only allow you to OpenZip() for unzipping, or =
+CreateZip()=20
+for adding, but don't allow you to mix the two. To modify an existing =
+zip (eg.=20
+adding or removing a file) you need to create a new zip and copy all the =
+
+existing items from the old into the new. One of the included examples,=20
+"modify", shows how to do this. It defines two functions:</P><PRE>  =
+ZRESULT RemoveFileFromZip(<SPAN class=3Dcpp-keyword>const</SPAN> TCHAR =
+*zip, <SPAN class=3Dcpp-keyword>const</SPAN> TCHAR *name);
+  ZRESULT AddFileToZip(<SPAN class=3Dcpp-keyword>const</SPAN> TCHAR =
+*zip, <SPAN class=3Dcpp-keyword>const</SPAN> TCHAR *name, <SPAN =
+class=3Dcpp-keyword>const</SPAN> TCHAR *fn);
+  <SPAN class=3Dcpp-comment>// eg. =
+AddFileToZip("c:\\archive.zip","znsimple.txt","c:\\docs\\file.txt");</SPA=
+N>
+  <SPAN class=3Dcpp-comment>// If the zipfile already contained that =
+thing (case-insensitive), it is removed.</SPAN>
+  <SPAN class=3Dcpp-comment>// These two functions are defined in =
+"modify.cpp"</SPAN>
+</PRE>
+<P><STRONG>"fatal error C1010: unexpected end of file</STRONG> while =
+looking for=20
+precompiled header directive". To fix this, select zip.cpp and unzip.cpp =
+and=20
+change <EM>Project &gt; Settings &gt; C++ &gt; PrecompiledHeaders</EM> =
+to=20
+<EM>NotUsingPrecompiledHeaders</EM>.</P>
+<H2>Discussion</H2>
+<P>Efrat says: "I think the design is very bad", and so objects when I =
+say that=20
+my API is clean and others are not. (Actually, he says my documentation =
+is the=20
+most conceited he's seen and my design is the worst that he's seen!) =
+I've=20
+reproduced his comments here, with my responses, so you can make a more =
+informed=20
+decision whether to use my library.</P>
+<P><EM>[Efrat]</EM> Better instead to use the <A=20
+href=3D"http://home.comcast.net/~jturkanis/iostreams/libs/iostreams/doc/h=
+ome.html">boost=20
+IOStream library</A>.<BR><EM>[Response]</EM> I love the boost library. =
+If people=20
+can figure out how to add it to their projects and zip/unzip with it, =
+they=20
+should definitely use boost rather than my code. (I'm still trying to =
+figure it=20
+out, though, and couldn't get it to compile under CE).</P>
+<P><EM>[Efrat]</EM> A compressed archive has internal state; it's a =
+classic=20
+object; the author's criticisms of OOP are unjustified. "OOP doesn't =
+mean=20
+placing your code in a cpp file."<BR><EM>[Response]</EM> I'm trying not =
+to be=20
+OOP. (1) you'll never inherit from an archive, nor invoke virtual =
+methods from=20
+it: we only use encapsulation, not any of the other pillars of OOP. By =
+using an=20
+opaque handle HZIP rather than a class, I indicate this clearly to the=20
+programmer. Also (2) C++ classes don't work cleanly across DLLs. Handles =
+like=20
+HZIPs do.<BR><EM>[Efrat]</EM> For intance, progress-notifications should =
+be done=20
+by virtual functions in a derived class, not by=20
+callbacks.<BR><EM>[Response]</EM> To get progress, you invoke UnzipItem =
+in a=20
+while loop, and each iteration unzips a little bit more of the file. =
+This is=20
+clean, re-entrant, and has a simple API. I think this is an easier API =
+than=20
+inheriting from a class. I think inheritance from library classes is =
+bad, in=20
+general.</P>
+<P><EM>[Efrat]</EM> Compression should go in a =
+DLL.<BR><EM>[Response]</EM> I=20
+disagree. DLLs are always pain, for developers as well as users. Unzip =
+only adds=20
+40k in any case.</P>
+<P><EM>[Efrat]</EM> The API doesn't use the type system to differentiate =
+between=20
+an HZIP for zipping and an HZIP for unzipping.<BR><EM>[Response]</EM> =
+This was=20
+intentional. The difference between zipping and unzipping is an current=20
+implementation drawback. I think an API should be clean, "aspirational", =
+and you=20
+shouldn't encode current implementation limitations into the type =
+system.</P>
+<P><EM>[Efrat]</EM> The API uses error-codes, rather than exceptions, =
+but anyone=20
+who has graudated Programming 101 knows exceptions are=20
+better.<BR><EM>[Response]</EM> I think exceptions are not welcomed =
+anywhere=20
+nearly as widely as Efrat suggests. Also, they don't work cleanly across =
+DLL=20
+boundaries, and they don't work on PocketPC.</P>
+<P><EM>[Efrat]</EM> The API is unflexible; it should be coded for =
+change, not=20
+just coded for all the options that were conceived while designing=20
+(handles,files, memory). Most users will think of sources and targets =
+which this=20
+design can't support.<BR><EM>[Response]</EM> The original zip uses =
+FILE*s, which=20
+are effectively the same as windows pipes. I also provided =
+memory-buffers which=20
+adds an enormous amount of flexibility that's easy to use and requires =
+no=20
+additional programming. For any users who <EM>need</EM> sources and =
+targets=20
+which can't be reached via a memory buffer, they shouldn't use these=20
+zip_utils.</P><EM>[Efrat]</EM> The is unnecessarily Windows-specific. =
+The=20
+original zlib works great and is portable; zip_utils offers no =
+advantages.=20
+Compression is memory-manipulation and IO and so should not be=20
+platform-specific.<BR><EM>[Response]</EM> In the olden days before STL,=20
+"cross-platform" code inevitably meant (1) peppered with so many #ifdefs =
+that=20
+you couldn't read it, (2) didn't work straight away under windows. I =
+started=20
+from and old code-base, and so Efrat's proposed bottom-up rewrite was =
+not=20
+possible. The advantage this code offers over zlib is that it's just a =
+single=20
+file to add to your project, it works first time under windows, you can =
+add it=20
+easily as a cpp module to your project (not just dll/lib), and the API =
+is=20
+simpler.
+<P></P>
+<P>In general, Efrat wants code to be a clean extensible framework. I =
+don't; I=20
+want small compact code that works fine as it is. Furthermore, I think =
+that=20
+"framework-isation" is the biggest source of bugs and code overruns in =
+the=20
+industry.</P>
+<H2>Acknowledgements</H2>
+<P>This version of article was updated on 28th July 2005. Many thanks to =
+the=20
+readers at CodeProject who found bugs and contributed fixes to an =
+earlier=20
+version. There was one terrible bug where, after a large file had been =
+unzipped,=20
+then the next one might not work. Alvin77 spotted this bug.</P>
+<P>My work is a repackaged form of extracts from the zlib code available =
+at <A=20
+href=3D"http://www.gzip.org/zlib" target=3D_top>www.gzip.org/zlib</A> by =
+Jean-Loup=20
+Gailly and Mark Adler and others. Also from the info-zip source code at =
+<A=20
+href=3D"http://www.info-zip.org/" =
+target=3D_top>http://www.info-zip.org/</A>. Plus a=20
+bunch of my own changes. The original source code can be found at those =
+two=20
+mentioned websites. Also the original copyright notices can be found =
+there, and=20
+also inside the files zip.cpp and unzip.cpp of my =
+code.</P></BODY></HTML>
+
+------=_NextPart_000_0000_01CB1EF0.AD361C60
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.wischik.com/lu/programmer/zip_utils.gif
+
+R0lGODlhHALPAPcAAP719//6/P/3+/78/f7v+f3n9/jZ9erR9PHo+dm/8b2s7+Pf+aOY7YqG6oSE
+o2126jNT5k9p6zxh5yVV5lx/7AEEDBpQ4yZe5i5j6EFz7ABH5Q9P5RlZ5gBO5g9W5CFk7Cps7QQI
+EABV6wBR4QNU4wRV4wRR4wdX5Qla5xFe6Rdg5yRt7jBz7xsxVxomPABZ5wBV5gBU4wJb7AJW4wNY
+5ANX5ARd6ARX5QRZ5QVa5QRKvAZZ5wZa5Qdg7Qdc5gdb5gle5whW2AY+nAti7gpf6Atg6Axg6gxh
+6A1i6RBl6hJm7RVm6xdo7hts7yp38Xig4QBd6QFh7All6wxp7g5m7RFm6hJq8RJn6xNp7BRp7BVt
+8RVq7BZr7Rhv8Rht7hlv7hpx8xpv7xls7Rtw7x1y8B518SB28S5pvQJl6wdn7g9w8RBt7hJy8Rh1
+8ht08SF48iJ58iN68yR78yV79CV89CZ99Cd+9Sh/9S+G9jtlnvb5/QFs7wdv8BV38xt68SJ+8DON
+/TqS/TuT/j2V/xB88ymQ/zKO9TiQ9UCV9wF28Ah+9BN43RuF8kqf9l14lCaR9jOa9hKN8TFXeDmj
++Fiy+W29/CKg+Eax+o7Q+bLk/sb2/9n7/+X//+7///X///v///j/+xEREP//8hUVFP//9v//+v//
+/d7e3fX06e3r2qKhl6emnfDu4Onn2ff27vn48XZ0aPz55u7r2eXi0f/86vbz4fLv3u/s2+3q2ezp
+2Orn1tfVyPHv4vPx5vj38XFvZc7Lu+/s3aWhkdTQv8rGtp6bjuzo162qnvLv4/j27fXz6vr59W5q
+XK2pmqyomamllq6qm4yIe7WxpNvXyrGsneDc0N3Zzd/b0aifiu/ky9fTy9TQyNDMxO3o39rRxPPy
+8YB/f////+Li4tjY2NLS0tHR0c3NzcrKysbGxsLCwsDAwLu7u7S0tKysrKKiopycnJGRkYmJiXR0
+dGJiYlZWVk9PT0ZGRjw8PDU1NS0tLSIiIhkZGQsLCwYGBgMDAwAAACwAAAAAHALPAAAI/wB5CRxI
+sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyAV9gLXK5zJkyhTqlzJsqXLlzBjypxJs6bN
+mzhz6tzJs6fPn0CDCh1KtCWxX6i+cdvGtKnTp1CjSp1KtarVq1izat3KtavXr2DDih1LtqzZs2jT
+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
+
+------=_NextPart_000_0000_01CB1EF0.AD361C60--
